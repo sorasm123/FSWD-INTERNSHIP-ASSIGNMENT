@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swara Shetty M - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* ---- HERO SECTION ---- */
+        .hero {
+            background-color: #4F46E5;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero .contact-info {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .hero .contact-info a {
+            color: #c7d2fe;
+            text-decoration: none;
+        }
+
+        .hero .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .hero .objective {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            opacity: 0.85;
+        }
+
+        /* ---- CONTAINER ---- */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* ---- SECTION HEADINGS ---- */
+        .section-title {
+            font-size: 1.8rem;
+            color: #4F46E5;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #4F46E5;
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        /* ---- CARDS ---- */
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px 25px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+        }
+
+        .card-header h3 {
+            font-size: 1.15rem;
+            color: #1e1b4b;
+        }
+
+        .card-header span {
+            font-size: 0.9rem;
+            color: #6366f1;
+            font-weight: 600;
+        }
+
+        .card p, .card li {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .card ul {
+            margin-top: 8px;
+            padding-left: 20px;
+        }
+
+        .card li {
+            margin-bottom: 4px;
+        }
+
+        /* ---- SKILLS GRID ---- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .skill-category {
+            background: white;
+            border-radius: 10px;
+            padding: 18px 22px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .skill-category h3 {
+            color: #4F46E5;
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
+        .skill-category p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        /* ---- ACTIVITIES LIST ---- */
+        .activities-list {
+            background: white;
+            border-radius: 10px;
+            padding: 20px 25px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .activities-list ul {
+            padding-left: 20px;
+        }
+
+        .activities-list li {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        /* ---- FOOTER ---- */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #888;
+            font-size: 0.85rem;
+        }
+
+        /* ---- RESPONSIVE ---- */
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO -->
+    <header class="hero">
+        <h1>Swara Shetty M</h1>
+        <p class="contact-info">
+            9591489421 &nbsp;|&nbsp;
+            <a href="mailto:swarashetty761@gmail.com">swarashetty761@gmail.com</a> &nbsp;|&nbsp;
+            Bengaluru, Karnataka, India
+        </p>
+        <p class="objective">
+            Aspiring to join an organization to learn from as well as empower me to explore my
+            abilities and capabilities to understand my true potential to contribute to the tech industry.
+        </p>
+    </header>
+
+    <div class="container">
+
+        <!-- EDUCATION -->
+        <section>
+            <h2 class="section-title">Education</h2>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Global Academy of Technology</h3>
+                    <span>2022 - Present</span>
+                </div>
+                <p>Bachelor of Engineering in Computer Science</p>
+                <ul>
+                    <li>CGPA: 8.37 (till 6th semester)</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>JS PU College</h3>
+                    <span>2020 - 2022</span>
+                </div>
+                <p>Percentage: 87.8%</p>
+                <ul>
+                    <li>Physics, Chemistry, Math, Biology</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>RNS Vidyanikethan</h3>
+                    <span>2020</span>
+                </div>
+                <p>Percentage: 88.8%</p>
+                <ul>
+                    <li>ICSE Board, High School</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section>
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <p>Python, C, Java, HTML, CSS</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Libraries</h3>
+                    <p>Pandas, NumPy, Matplotlib</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Development Tools</h3>
+                    <p>VSCode, Jupyter Notebook, Eclipse, GitHub</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <p>Team Player, Leadership, Responsibility, Punctuality, Communication</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section>
+            <h2 class="section-title">Projects</h2>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Next-Generation Waste Management (IoT)</h3>
+                    <span>May 2025 - Present</span>
+                </div>
+                <p>A Smart, Sensor-Based and Community-Driven Approach</p>
+                <ul>
+                    <li>Designed a smart IoT-based waste management system with sensor bins, real-time monitoring, and citizen reporting.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Mental Health Insights: AIML-Based Suicide Prediction &amp; Support Platform</h3>
+                    <span>Dec 2024 - Mar 2025</span>
+                </div>
+                <ul>
+                    <li>Designed a web platform to promote mental health awareness using AI-based suicide rate prediction, therapy resources, support blogs, and integration of local and global helplines.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CERTIFICATIONS -->
+        <section>
+            <h2 class="section-title">Certifications</h2>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Awareness and Hands-on Session on IoT and Its Applications</h3>
+                    <span>June 2025</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Generative AI Leader Course Series (GAIL)</h3>
+                    <span>Present</span>
+                </div>
+                <p>By Google Career Launchpad</p>
+            </div>
+        </section>
+
+        <!-- EXTRA CURRICULAR -->
+        <section>
+            <h2 class="section-title">Extra Curricular Activities</h2>
+            <div class="activities-list">
+                <ul>
+                    <li><strong>Office Bearer</strong>, IT Virtuoso Student Forum — Student club of CS&amp;E Dept., Global Academy of Technology (July 2025 - Present)</li>
+                    <li><strong>Volunteer &amp; Coordinator</strong> — Hack-a-League 2.0 (Feb 2024) and Coordinator for Hack-a-League 3.0 (Feb 2025), 24-hour offline hackathons at Global Academy of Technology, Bengaluru.</li>
+                    <li><strong>Organizing Committee Member</strong> — Regional Rounds (South 2), IET India Scholarship Award 2024.</li>
+                    <li><strong>Volunteer</strong> — Week-long camp for government school children organized by Youth For Seva.</li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        &copy; 2026 Swara Shetty M
+    </footer>
+
+</body>
+</html>

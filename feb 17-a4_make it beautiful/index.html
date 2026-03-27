@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swara Shetty M - Personal Profile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: #CC3300;
+            line-height: 1.6;
+        }
+
+        /* ===== NAVIGATION ===== */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: #CC3300;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 50px;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            text-align: center;
+            padding: 40px 40px 60px;
+            background: linear-gradient(to bottom, #ffffff, #FEFDE2);
+        }
+
+        .hero h1 {
+            font-size: 6rem;
+            font-weight: 800;
+            line-height: 1.0;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            color: #CC3300;
+        }
+
+        .hero h1 span {
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .hero-image {
+            width: 220px;
+            height: 280px;
+            margin: 0 auto 30px;
+            transition: transform 0.4s;
+        }
+
+        .hero-image:hover {
+            transform: scale(1.05);
+        }
+
+        .hero-subtitle {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 0 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ===== PROJECTS SECTION ===== */
+        .projects {
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .projects h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #CC3300;
+            margin-bottom: 5px;
+        }
+
+        .projects h2 span {
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .project-gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            width: 300px;
+            text-align: left;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            transition: transform 0.4s;
+        }
+
+        .project-card img:hover {
+            transform: scale(1.04);
+        }
+
+        .project-card h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-top: 12px;
+            color: #CC3300;
+        }
+
+        .project-card p {
+            font-size: 0.9rem;
+            color: #CC3300;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about {
+            padding: 80px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+            background: radial-gradient(circle at 20% 50%, rgba(255, 200, 100, 0.15), transparent 50%),
+                        radial-gradient(circle at 80% 50%, rgba(255, 100, 100, 0.1), transparent 50%),
+                        radial-gradient(circle at 50% 80%, rgba(180, 255, 180, 0.1), transparent 50%);
+        }
+
+        .about-left {
+            flex: 1;
+        }
+
+        .about-left h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #CC3300;
+            margin-bottom: 20px;
+        }
+
+        .about-center {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .about-center img {
+            width: 220px;
+            height: 280px;
+            transition: transform 0.4s;
+        }
+
+        .about-center img:hover {
+            transform: scale(1.05);
+        }
+
+        .about-right {
+            flex: 1;
+        }
+
+        .about-right p {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #CC3300;
+            line-height: 1.7;
+        }
+
+        /* ===== SKILLS SECTION (yellow band) ===== */
+        .skills {
+            background-color: #F0F060;
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .skills h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #CC3300;
+            margin-bottom: 10px;
+        }
+
+        .skills h2 span {
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 40px;
+        }
+
+        .skills-list li {
+            font-size: 2.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #CC3300;
+            margin-bottom: 15px;
+            transition: transform 0.3s;
+        }
+
+        .skills-list li:hover {
+            transform: scale(1.05);
+        }
+
+        /* ===== HOBBIES SECTION ===== */
+        .hobbies {
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .hobbies h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #CC3300;
+            margin-bottom: 10px;
+        }
+
+        .hobbies h2 span {
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .hobbies-gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .hobby-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .hobby-item img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.4s;
+        }
+
+        .hobby-item img:hover {
+            transform: scale(1.06);
+        }
+
+        .hobby-item p {
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #CC3300;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            padding: 60px 40px 30px;
+            background: linear-gradient(to bottom, #ffffff, #FEFDE2);
+        }
+
+        .footer-title h2 {
+            font-size: 5rem;
+            font-weight: 800;
+            line-height: 1.0;
+            text-transform: uppercase;
+            color: #CC3300;
+        }
+
+        .footer-title h2 span {
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .footer-info {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+            padding-top: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .footer-col p {
+            color: #CC3300;
+            margin-bottom: 4px;
+        }
+
+        .footer-col a {
+            color: #CC3300;
+            text-decoration: none;
+        }
+
+        .footer-col a:hover {
+            text-decoration: underline;
+        }
+
+        .copyright {
+            text-align: right;
+            font-size: 0.8rem;
+            color: #CC3300;
+            opacity: 0.7;
+            margin-top: 10px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-links {
+                gap: 20px;
+            }
+
+            .about {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .skills-list li {
+                font-size: 1.6rem;
+            }
+
+            .footer-title h2 {
+                font-size: 2.5rem;
+            }
+
+            .footer-info {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .project-card {
+                width: 100%;
+            }
+
+            .hobbies-list {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#">Swara Shetty M</a>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#hobbies">Hobbies</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero">
+        <h1><span>The</span> CREATIVE<br>ENGINEER</h1>
+        <img class="hero-image" src="https://placehold.co/220x280/CC3300/ffffff?text=Swara" alt="Profile photo of Swara Shetty M">
+        <div class="hero-subtitle">
+            <p>CS ENGINEERING STUDENT<br>&amp; TECH ENTHUSIAST</p>
+            <p>READY TO BUILD<br>THE NEXT BIG THING?</p>
+        </div>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="projects" id="projects">
+        <h2>LATEST <span>Projects</span></h2>
+        <div class="project-gallery">
+            <div class="project-card">
+                <img src="https://placehold.co/300x200/E8A87C/CC3300?text=IoT+Project" alt="IoT Waste Management Project">
+                <h3>Smart Waste Management</h3>
+                <p>An IoT-based system with sensor bins, real-time monitoring, and citizen reporting for smarter cities.</p>
+            </div>
+            <div class="project-card">
+                <img src="https://placehold.co/300x200/85CDCA/CC3300?text=AI+Platform" alt="Mental Health AI Platform">
+                <h3>Mental Health Insights</h3>
+                <p>AIML-based web platform for mental health awareness with AI prediction and support resources.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="about" id="about">
+        <div class="about-left">
+            <h2>ABOUT</h2>
+        </div>
+        <div class="about-center">
+            <img src="https://placehold.co/220x280/CC3300/ffffff?text=About+Me" alt="About Swara">
+        </div>
+        <div class="about-right">
+            <p>
+                Hi! I'm Swara Shetty M, a Computer Science Engineering student at Global Academy of Technology, Bengaluru.
+                Currently in my final year with a CGPA of 8.37. I'm passionate about technology, problem-solving,
+                and exploring how AI can make a difference in everyday life. I aspire to learn, grow, and contribute meaningfully to the tech industry.
+            </p>
+        </div>
+    </div>
+
+    <!-- SKILLS (yellow section) -->
+    <div class="skills" id="skills">
+        <h2>CREATIVE <span>Skills</span></h2>
+        <ul class="skills-list">
+            <li>Python &middot; C &middot; Java</li>
+            <li>HTML &middot; CSS</li>
+            <li>Pandas &middot; NumPy &middot; Matplotlib</li>
+            <li>VSCode &middot; GitHub</li>
+        </ul>
+    </div>
+
+    <!-- HOBBIES -->
+    <div class="hobbies" id="hobbies">
+        <h2>MY <span>Interests</span></h2>
+        <div class="hobbies-gallery">
+            <div class="hobby-item">
+                <img src="https://media.giphy.com/media/S4mZzVZjuSYsiGdWYc/giphy.gif" alt="Music - animated singing illustration">
+                <p>Music</p>
+            </div>
+            <div class="hobby-item">
+                <img src="https://media.giphy.com/media/3o72FkreWNH9OlTtPq/giphy.gif" alt="Dance - animated dance illustration">
+                <p>Dance</p>
+            </div>
+            <div class="hobby-item">
+                <img src="https://media.giphy.com/media/3oriOiBJx3ADbXFBM4/giphy.gif" alt="Reading - animated book illustration">
+                <p>Reading</p>
+            </div>
+            <div class="hobby-item">
+                <img src="https://media.giphy.com/media/k0ijJhqrUP4T2EvmJ1/giphy.gif" alt="AI Tools - animated coding illustration">
+                <p>Working with AI Tools</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-title">
+            <h2>SWARA SHETTY M</h2>
+        </div>
+        <div class="footer-info">
+            <div class="footer-col">
+                <p>Global Academy of Technology</p>
+                <p>Bengaluru, Karnataka, India</p>
+            </div>
+            <div class="footer-col">
+                <p>9591489421</p>
+                <p><a href="mailto:swarashetty761@gmail.com">swarashetty761@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <p><a href="https://github.com">GitHub</a></p>
+            </div>
+            <div class="footer-col">
+                <p class="copyright">&copy; 2026 Swara Shetty M</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

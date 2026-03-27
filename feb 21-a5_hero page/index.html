@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnStack - Build Your Future</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Device Switcher Bar -->
+    <div class="device-bar">
+        <button class="device-btn active" id="desktopBtn">&#128187;</button>
+        <button class="device-btn" id="tabletBtn">&#128195;</button>
+        <button class="device-btn" id="mobileBtn">&#128241;</button>
+    </div>
+
+    <div class="preview-wrapper" id="previewWrapper">
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Build Your Future with Full Stack Development</h1>
+                <p>Join thousands of learners mastering the MERN stack through hands-on projects, live mentorship, and real-world experience. Start your journey from zero to full stack developer today.</p>
+                <a href="#" class="cta-button" id="ctaBtn">Get Started</a>
+            </div>
+            <div class="hero-image">
+                <img src="hero-image.png" alt="Illustration of a person coding on a laptop">
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Bonus: CTA button click interaction
+        let ctaBtn = document.getElementById("ctaBtn");
+        ctaBtn.addEventListener("click", function() {
+            alert("Welcome! Let's start your Full Stack journey!");
+        });
+
+        // Device switcher logic
+        let desktopBtn = document.getElementById("desktopBtn");
+        let tabletBtn = document.getElementById("tabletBtn");
+        let mobileBtn = document.getElementById("mobileBtn");
+        let wrapper = document.getElementById("previewWrapper");
+
+        function switchDevice(size, activeBtn) {
+            // Remove active class from all buttons
+            desktopBtn.classList.remove("active");
+            tabletBtn.classList.remove("active");
+            mobileBtn.classList.remove("active");
+
+            // Add active to clicked button
+            activeBtn.classList.add("active");
+
+            // Remove all size classes
+            wrapper.classList.remove("desktop-view", "tablet-view", "mobile-view");
+
+            // Add selected size class
+            wrapper.classList.add(size);
+        }
+
+        desktopBtn.addEventListener("click", function() {
+            switchDevice("desktop-view", desktopBtn);
+        });
+
+        tabletBtn.addEventListener("click", function() {
+            switchDevice("tablet-view", tabletBtn);
+        });
+
+        mobileBtn.addEventListener("click", function() {
+            switchDevice("mobile-view", mobileBtn);
+        });
+    </script>
+
+</body>
+</html>

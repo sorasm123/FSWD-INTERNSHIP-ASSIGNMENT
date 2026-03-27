@@ -1,0 +1,178 @@
+/* ===== Base Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a2e;
+}
+
+/* ===== Device Switcher Bar ===== */
+.device-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background-color: #111;
+    border-bottom: 2px solid #333;
+}
+
+.device-btn {
+    padding: 10px 16px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #888;
+    background-color: #222;
+    border: 2px solid #333;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.device-btn:hover {
+    color: #ccc;
+    border-color: #555;
+}
+
+.device-btn.active {
+    color: #ffffff;
+    background-color: hsl(248, 70%, 55%);
+    border-color: hsl(248, 70%, 55%);
+}
+
+/* ===== Preview Wrapper ===== */
+.preview-wrapper {
+    max-width: 100%;
+    margin: 30px auto;
+    transition: max-width 0.4s ease;
+}
+
+.preview-wrapper.desktop-view {
+    max-width: 100%;
+}
+
+.preview-wrapper.tablet-view {
+    max-width: 768px;
+}
+
+.preview-wrapper.mobile-view {
+    max-width: 400px;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 80px 60px;
+    min-height: 80vh;
+    background-color: #0b1d3a;
+    border-radius: 12px;
+}
+
+/* ===== Left Side - Text Content ===== */
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(180, 195, 215);
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+/* ===== CTA Button (styled <a> tag) ===== */
+.cta-button {
+    display: inline-block;
+    padding: 14px 36px;
+    margin-top: 10px;
+    background-color: hsl(348, 80%, 56%);
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid hsl(348, 80%, 56%);
+    border-radius: 6px;
+}
+
+.cta-button:hover {
+    background-color: hsl(348, 80%, 46%);
+    border-color: hsl(348, 80%, 46%);
+}
+
+/* ===== Right Side - Hero Image ===== */
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* ===== Responsive Design - Mobile View ===== */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 20px;
+        gap: 30px;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .cta-button {
+        padding: 12px 28px;
+        font-size: 16px;
+    }
+}
+
+/* ===== Also apply mobile styles when wrapper is shrunk ===== */
+.mobile-view .hero,
+.tablet-view .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+    gap: 30px;
+}
+
+.mobile-view .hero-text h1,
+.tablet-view .hero-text h1 {
+    font-size: 28px;
+}
+
+.mobile-view .hero-text p,
+.tablet-view .hero-text p {
+    font-size: 16px;
+}
+
+.mobile-view .cta-button,
+.tablet-view .cta-button {
+    padding: 12px 28px;
+    font-size: 16px;
+}

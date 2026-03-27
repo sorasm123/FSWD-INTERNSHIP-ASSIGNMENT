@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f5;
+  color: #333;
+}
+
+.app {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #4F46E5;
+  margin-bottom: 20px;
+}
+
+.search-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.search-form input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.search-form button {
+  padding: 10px 20px;
+  background-color: #4F46E5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  background-color: #3730a3;
+}
+
+.quick-cities {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.quick-cities button {
+  padding: 6px 14px;
+  background: white;
+  color: #4F46E5;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.quick-cities button:hover {
+  background-color: #4F46E5;
+  color: white;
+  border-color: #4F46E5;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 1rem;
+}
+
+.error {
+  text-align: center;
+  padding: 20px;
+  color: #e74c3c;
+  background: #ffeaea;
+  border-radius: 8px;
+}
+
+.weather-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.weather-card h2 {
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.temp {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #4F46E5;
+  margin: 10px 0;
+}
+
+.description {
+  text-transform: capitalize;
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.detail-item {
+  background: #f8f8fc;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.detail-item span {
+  display: block;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.detail-item strong {
+  font-size: 1rem;
+  color: #333;
+}
