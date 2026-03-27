@@ -1,0 +1,7 @@
+[
+  { "id": 1, "name": "Swara Shetty", "role": "Full Stack Intern", "batch": "FSWD-2026" },
+  { "id": 2, "name": "Rahul Kumar", "role": "Backend Intern", "batch": "FSWD-2026" },
+  { "id": 3, "name": "Priya Sharma", "role": "Frontend Intern", "batch": "FSWD-2026" },
+  { "id": 4, "name": "Aditya Nair", "role": "Full Stack Intern", "batch": "FSWD-2026" },
+  { "id": 5, "name": "Meera Reddy", "role": "UI/UX Intern", "batch": "FSWD-2026" }
+]

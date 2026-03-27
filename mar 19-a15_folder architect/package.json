@@ -1,0 +1,9 @@
+{
+  "name": "folder-architect",
+  "version": "1.0.0",
+  "description": "A structured project demonstrating folder architecture with a Node.js API and frontend client",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js"
+  }
+}
